@@ -6,17 +6,11 @@
 
 struct FMyObject : std::enable_shared_from_this<FMyObject>
 {
-    // shared_ptr to really make this crash dereferencing invalid memory
-    std::shared_ptr<std::string> MyString;
+    std::string MyString;
 
     FMyObject(const std::string &InMyString)
-        : MyString(std::make_shared<std::string>(InMyString))
+        : MyString(InMyString)
     {
-    }
-
-    ~FMyObject()
-    {
-        this->MyString.reset();
     }
 
     TTask<void> VoidCoroutine()
@@ -28,7 +22,7 @@ struct FMyObject : std::enable_shared_from_this<FMyObject>
     TTask<std::string> SimpleCoroutine()
     {
         co_await VoidCoroutine();
-        co_return *this->MyString;
+        co_return this->MyString;
     }
 };
 
@@ -39,7 +33,7 @@ TTask<int> AsyncMain()
     auto Task = Object->SimpleCoroutine();
 
     // Invalidate the object.
-    Object.reset();
+    // Object.reset();
 
     std::string Value = co_await Task;
 
