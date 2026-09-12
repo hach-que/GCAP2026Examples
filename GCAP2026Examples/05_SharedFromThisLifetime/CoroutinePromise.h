@@ -42,6 +42,13 @@ struct TCoroutinePromise
     {
         return TTask<ReturnType>(this->State);
     }
+
+    // -------- Add promise validity passthrough --------
+
+    bool promise_is_valid() const
+    {
+        return this->State->IsValid();
+    }
 };
 
 // Specialization for void.
@@ -82,5 +89,10 @@ struct TCoroutinePromise<void>
     TTask<void> get_return_object()
     {
         return TTask<void>(this->State);
+    }
+
+    bool promise_is_valid() const
+    {
+        return this->State->IsValid();
     }
 };

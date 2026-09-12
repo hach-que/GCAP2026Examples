@@ -32,12 +32,21 @@ public:
         return this->State->Value.has_value();
     }
 
-    void await_suspend(std::coroutine_handle<> Handle)
+    template <typename CoroutinePromise>
+    void await_suspend(std::coroutine_handle<CoroutinePromise> Handle)
         requires(!std::is_void_v<ReturnType>)
     {
         this->State->Callbacks.push_back([Handle](ReturnType) {
-            // @todo: Lifetime checks
-            Handle.resume();
+            // @note: see promise_is_valid on coroutine promise type to pass call down into task state
+            if (Handle.promise().promise_is_valid())
+            {
+                Handle.resume();
+            }
+            else
+            {
+                // owner no longer valid
+                std::terminate();
+            }
         });
     }
 
@@ -55,12 +64,21 @@ public:
         return this->State->bComplete;
     }
 
-    void await_suspend(std::coroutine_handle<> Handle)
+    template <typename CoroutinePromise>
+    void await_suspend(std::coroutine_handle<CoroutinePromise> Handle)
         requires(std::is_void_v<ReturnType>)
     {
         this->State->Callbacks.push_back([Handle]() {
-            // @todo: Lifetime checks
-            Handle.resume();
+            // @note: see promise_is_valid on coroutine promise type to pass call down into task state
+            if (Handle.promise().promise_is_valid())
+            {
+                Handle.resume();
+            }
+            else
+            {
+                // owner no longer valid
+                std::terminate();
+            }
         });
     }
 
