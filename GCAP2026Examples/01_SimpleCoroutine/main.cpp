@@ -104,7 +104,7 @@ int main()
     if (Task.State->Value.has_value())
     {
         // Value immediately available.
-        printf("%d\n", Task.State->Value.value());
+        printf("Immediate: %d\n", Task.State->Value.value());
         bComplete = true;
     }
     else
@@ -113,7 +113,7 @@ int main()
             Task.State->Value =
                 InValue; // Mirror default behaviour because we're keeping the API surface simple in this example.
 
-            printf("%d\n", Task.State->Value.value());
+            printf("Delayed: %d\n", Task.State->Value.value());
             bComplete = true;
         };
     }

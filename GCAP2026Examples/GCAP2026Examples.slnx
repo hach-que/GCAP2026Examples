@@ -4,4 +4,5 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="01_SimpleCoroutine/01_SimpleCoroutine.vcxproj" />
+  <Project Path="02_SimpleAwaitable/02_SimpleAwaitable.vcxproj" />
 </Solution>
