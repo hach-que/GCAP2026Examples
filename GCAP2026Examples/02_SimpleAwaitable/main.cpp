@@ -120,7 +120,6 @@ struct coroutine_traits<TTask<ReturnType>>
 
 }
 
-// A really simple coroutine that doesn't actually await anything.
 TTask<int> SimpleCoroutine()
 {
     // ------ AWAITABLE USED
