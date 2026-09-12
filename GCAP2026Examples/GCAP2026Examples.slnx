@@ -6,4 +6,5 @@
   <Project Path="01_SimpleCoroutine/01_SimpleCoroutine.vcxproj" />
   <Project Path="02_SimpleAwaitable/02_SimpleAwaitable.vcxproj" />
   <Project Path="03_TaskAwaitable/03_TaskAwaitable.vcxproj" />
+  <Project Path="04_TaskVoidAwaitable/04_TaskVoidAwaitable.vcxproj" />
 </Solution>
