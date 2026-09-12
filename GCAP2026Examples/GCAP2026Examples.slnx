@@ -7,4 +7,5 @@
   <Project Path="02_SimpleAwaitable/02_SimpleAwaitable.vcxproj" />
   <Project Path="03_TaskAwaitable/03_TaskAwaitable.vcxproj" />
   <Project Path="04_TaskVoidAwaitable/04_TaskVoidAwaitable.vcxproj" />
+  <Project Path="05_SharedFromThisLifetime/05_SharedFromThisLifetime.vcxproj" />
 </Solution>
