@@ -3,9 +3,10 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="01_SimpleCoroutine/01_SimpleCoroutine.vcxproj" />
-  <Project Path="02_SimpleAwaitable/02_SimpleAwaitable.vcxproj" />
-  <Project Path="03_TaskAwaitable/03_TaskAwaitable.vcxproj" />
-  <Project Path="04_TaskVoidAwaitable/04_TaskVoidAwaitable.vcxproj" />
-  <Project Path="05_SharedFromThisLifetime/05_SharedFromThisLifetime.vcxproj" />
+  <Project Path="01_SimpleCoroutine/01_SimpleCoroutine.vcxproj" Id="b597b83b-ecf2-46ee-b180-2e5ac389b63c" />
+  <Project Path="02_SimpleAwaitable/02_SimpleAwaitable.vcxproj" Id="df2024e8-ca5d-444d-817c-2d037ab76ce4" />
+  <Project Path="03_TaskAwaitable/03_TaskAwaitable.vcxproj" Id="12caec3f-192d-4023-bbdf-a9d2b01522b8" />
+  <Project Path="04_TaskVoidAwaitable/04_TaskVoidAwaitable.vcxproj" Id="8d6f69de-b7f6-42c3-b799-20d7cad84c3c" />
+  <Project Path="05_SharedFromThisLifetime/05_SharedFromThisLifetime.vcxproj" Id="46e2f030-4066-4c63-b282-2261553586c9" />
+  <Project Path="06_Arguments/06_Arguments.vcxproj" Id="5f244fdb-ffbc-4c34-a668-8621ca246776" />
 </Solution>
