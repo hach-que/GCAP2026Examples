@@ -10,6 +10,9 @@ template <typename ReturnType, ETaskBinding TaskBinding = ETaskBinding::Unspecif
 struct TTask
 {
     friend struct TCoroutinePromise<ReturnType, TaskBinding>;
+    friend struct TTask<ReturnType, ETaskBinding::Unspecified>;
+    friend struct TTask<ReturnType, ETaskBinding::Static>;
+    friend struct TTask<ReturnType, ETaskBinding::Unbound>;
 
 private:
     std::shared_ptr<TTaskStateBase<ReturnType>> State;

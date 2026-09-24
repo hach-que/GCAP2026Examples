@@ -32,23 +32,25 @@ struct FMyObject : std::enable_shared_from_this<FMyObject>
         co_return;
     }
 
-    TTask<std::string> SimpleCoroutine()
+    TTask<std::string> SimpleCoroutine(std::string Suffix)
     {
         co_await VoidCoroutine();
-        co_return this->MyString;
+        co_return this->MyString + Suffix;
     }
 
-    /* TTask<void> CoroutineWithPointer(int *Ptr)
-     {
-         co_return;
-     }*/
+    /*
+    TTask<void> CoroutineWithPointer(int *Ptr)
+    {
+        co_return;
+    }
+    */
 };
 
 TTask<int, ETaskBinding::Static> AsyncMain()
 {
     auto Object = std::make_shared<FMyObject>("hello world!");
 
-    std::string Value = co_await Object->SimpleCoroutine();
+    std::string Value = co_await Object->SimpleCoroutine(" with my suffix");
     printf("got value from SimpleCoroutine: %s\n", Value.c_str());
 
     co_await GlobalCoroutine();
