@@ -30,6 +30,41 @@
 namespace std
 {
 
+#if defined(__INTELLISENSE__) && __INTELLISENSE__
+
+#define GENERATE_COROUTINE_TRAIT(TaskBindingValue)                                                                     \
+    template <typename ReturnType, typename... Args>                                                                   \
+    struct coroutine_traits<TTask<ReturnType, TaskBindingValue>, Args...>                                              \
+    {                                                                                                                  \
+        struct promise_type                                                                                            \
+        {                                                                                                              \
+            TTask<ReturnType, TaskBindingValue> get_return_object();                                                   \
+            std::suspend_never initial_suspend() noexcept;                                                             \
+            std::suspend_never final_suspend() noexcept;                                                               \
+            void return_value(const ReturnType &value);                                                                \
+            void unhandled_exception();                                                                                \
+        };                                                                                                             \
+    };                                                                                                                 \
+    template <typename... Args>                                                                                        \
+    struct coroutine_traits<TTask<void, TaskBindingValue>, Args...>                                                    \
+    {                                                                                                                  \
+        struct promise_type                                                                                            \
+        {                                                                                                              \
+            TTask<void, TaskBindingValue> get_return_object();                                                         \
+            std::suspend_never initial_suspend() noexcept;                                                             \
+            std::suspend_never final_suspend() noexcept;                                                               \
+            void return_void();                                                                                        \
+            void unhandled_exception();                                                                                \
+        };                                                                                                             \
+    };
+
+GENERATE_COROUTINE_TRAIT(ETaskBinding::Static)
+GENERATE_COROUTINE_TRAIT(ETaskBinding::Unspecified)
+
+#undef GENERATE_COROUTINE_TRAIT
+
+#else
+
 template <typename ReturnType, typename... Args>
 struct coroutine_traits<TTask<ReturnType, ETaskBinding::Static>, Args...>
 {
@@ -75,6 +110,8 @@ struct coroutine_traits<TTask<ReturnType, ETaskBinding::Unspecified>, ClassType 
         }
     };
 };
+
+#endif
 
 }
 
