@@ -51,7 +51,7 @@ TTask<int, ETaskBinding::Static> AsyncMain()
 
     auto Task = Object->SimpleCoroutine(" with my suffix");
 
-    Object.reset();
+    // Object.reset();
 
     std::string Value = co_await Task;
     printf("got value from SimpleCoroutine: %s\n", Value.c_str());
