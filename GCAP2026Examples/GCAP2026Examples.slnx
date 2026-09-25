@@ -9,4 +9,5 @@
   <Project Path="04_TaskVoidAwaitable/04_TaskVoidAwaitable.vcxproj" Id="8d6f69de-b7f6-42c3-b799-20d7cad84c3c" />
   <Project Path="05_SharedFromThisLifetime/05_SharedFromThisLifetime.vcxproj" Id="46e2f030-4066-4c63-b282-2261553586c9" />
   <Project Path="06_Arguments/06_Arguments.vcxproj" Id="5f244fdb-ffbc-4c34-a668-8621ca246776" />
+  <Project Path="07_Cancellation/07_Cancellation.vcxproj" />
 </Solution>
