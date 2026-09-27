@@ -11,4 +11,5 @@
   <Project Path="06_Arguments/06_Arguments.vcxproj" Id="5f244fdb-ffbc-4c34-a668-8621ca246776" />
   <Project Path="07_ImposedCancellation/07_ImposedCancellation.vcxproj" Id="ad2e944a-6ef0-430e-862d-bff5ffeb59c9" />
   <Project Path="08_DeferredTasks/08_DeferredTasks.vcxproj" />
+  <Project Path="09_AsCallback/09_AsCallback.vcxproj" />
 </Solution>
