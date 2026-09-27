@@ -3,14 +3,6 @@
 #include "DelayOnAnotherThread.h"
 #include <string>
 
-// @notes:
-//
-// - TCoroutineTraits has been updated with Args... and ETaskBinding
-// - TTask now has an implicit cast to cast away different ETaskBindings
-// - TCoroutinePromise has ETaskBinding added to it's template, so that get_return_object can match the function return
-//   exactly
-// - Friend declaration on TTask has been updated with TaskBinding on TCoroutinePromise
-
 TTask<void, ETaskBinding::Static> GlobalCoroutine()
 {
     co_return;
