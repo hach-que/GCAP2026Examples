@@ -13,7 +13,7 @@ int main()
     using namespace std::chrono_literals;
 
     std::optional<int> ExitCode;
-    AsCallback<int>(
+    AsCallback(
         AsyncMain(),
         [&ExitCode](int InExitCode) {
             ExitCode = InExitCode;

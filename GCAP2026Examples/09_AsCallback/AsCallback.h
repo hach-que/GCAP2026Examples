@@ -17,9 +17,9 @@ struct FAsCallbackTypes<void>
     using OnCompletion = std::function<void()>;
 };
 
-template <typename ReturnType>
+template <typename ReturnType, ETaskBinding TaskBinding>
 void AsCallback(
-    TTask<ReturnType> Task,
+    TTask<ReturnType, TaskBinding> Task,
     typename FAsCallbackTypes<ReturnType>::OnCompletion OnCompletion,
     std::function<void()> OnCancellation)
 {
