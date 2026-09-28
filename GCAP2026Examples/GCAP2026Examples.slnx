@@ -12,7 +12,7 @@
   <Project Path="07_ImposedCancellation/07_ImposedCancellation.vcxproj" Id="ad2e944a-6ef0-430e-862d-bff5ffeb59c9" />
   <Project Path="08_DeferredTasks/08_DeferredTasks.vcxproj" Id="5c7d2e22-c605-4137-bf8e-369d75e56abb" />
   <Project Path="09_AsCallback/09_AsCallback.vcxproj" Id="35e8e071-3077-445a-a03a-a600007ffec6" />
-  <Project Path="10_RequestedCancellation/10_RequestedCancellation.vcxproj" />
-  <Project Path="11_AsPotentiallyCancelled/11_AsPotentiallyCancelled.vcxproj" />
-  <Project Path="12_AsyncLambdas/12_AsyncLambdas.vcxproj" />
+  <Project Path="10_RequestedCancellation/10_RequestedCancellation.vcxproj" Id="38eb3609-db4a-4f78-a921-06db0eb48f37" />
+  <Project Path="11_AsPotentiallyCancelled/11_AsPotentiallyCancelled.vcxproj" Id="f6009064-3a72-47e2-95ca-dd0e1c37c846" />
+  <Project Path="12_AsyncLambdas/12_AsyncLambdas.vcxproj" Id="de2470b4-2af2-47c0-8c78-1a85e7abb2e3" />
 </Solution>
