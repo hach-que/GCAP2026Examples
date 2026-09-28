@@ -14,4 +14,5 @@
   <Project Path="09_AsCallback/09_AsCallback.vcxproj" Id="35e8e071-3077-445a-a03a-a600007ffec6" />
   <Project Path="10_RequestedCancellation/10_RequestedCancellation.vcxproj" />
   <Project Path="11_AsPotentiallyCancelled/11_AsPotentiallyCancelled.vcxproj" />
+  <Project Path="12_AsyncLambdas/12_AsyncLambdas.vcxproj" />
 </Solution>
