@@ -10,6 +10,7 @@
   <Project Path="05_SharedFromThisLifetime/05_SharedFromThisLifetime.vcxproj" Id="46e2f030-4066-4c63-b282-2261553586c9" />
   <Project Path="06_Arguments/06_Arguments.vcxproj" Id="5f244fdb-ffbc-4c34-a668-8621ca246776" />
   <Project Path="07_ImposedCancellation/07_ImposedCancellation.vcxproj" Id="ad2e944a-6ef0-430e-862d-bff5ffeb59c9" />
-  <Project Path="08_DeferredTasks/08_DeferredTasks.vcxproj" />
-  <Project Path="09_AsCallback/09_AsCallback.vcxproj" />
+  <Project Path="08_DeferredTasks/08_DeferredTasks.vcxproj" Id="5c7d2e22-c605-4137-bf8e-369d75e56abb" />
+  <Project Path="09_AsCallback/09_AsCallback.vcxproj" Id="35e8e071-3077-445a-a03a-a600007ffec6" />
+  <Project Path="10_RequestedCancellation/10_RequestedCancellation.vcxproj" />
 </Solution>
