@@ -1,5 +1,7 @@
 #pragma once
 
+#include "ForwardDecl.h"
+#include "TaskBinding.h"
 #include "TaskState.h"
 #include <coroutine>
 #include <memory>

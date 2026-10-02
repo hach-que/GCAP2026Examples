@@ -6,7 +6,7 @@
 #include <coroutine>
 #include <memory>
 
-template <typename ReturnType, ETaskBinding TaskBinding = ETaskBinding::Unspecified>
+template <typename ReturnType, ETaskBinding TaskBinding>
 struct TTask
 {
     friend struct TCoroutinePromise<ReturnType, TaskBinding>;
